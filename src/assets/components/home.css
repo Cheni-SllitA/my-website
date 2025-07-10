@@ -1,0 +1,142 @@
+/* src/App.css */
+.App {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  background: #282c34;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.section {
+  margin: 40px 0;
+}
+
+h2 {
+  color: #007bff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "✓ ";
+  color: green;
+}
+
+.project-card {
+  background: #f5f5f5;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* src/home.css */
+
+.App {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 0 15px;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #007acc;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #007acc;
+}
+
+.header p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #007acc;
+}
+
+.about p,
+.skills ul,
+.projects .project-card p,
+.contact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.skills ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.projects .project-card {
+  background-color: #f0f8ff;
+  border: 1px solid #007acc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgb(0 122 204 / 0.2);
+}
+
+.projects .project-card h3 {
+  margin-top: 0;
+  color: #005a9e;
+}
+
+.contact a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
