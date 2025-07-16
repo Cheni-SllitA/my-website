@@ -2,6 +2,7 @@
 import React from "react";
 import "./home.css";
 import { motion } from "framer-motion";
+import profileImg from '../images/12x18 v.jpg';
 
 function Home() {
   const sectionAnimation = {
@@ -11,7 +12,6 @@ function Home() {
     viewport: { once: true, amount: 0.2 },
   };
 
-  // Animation variants for each project card
   const projectCardAnimation = {
     whileHover: { scale: 1.05, boxShadow: "0 8px 20px rgba(0,0,0,0.15)" },
     whileTap: { scale: 0.95 },
@@ -24,85 +24,181 @@ function Home() {
         <p>Software Engineering Student | Passionate Developer</p>
       </header>
 
-      <motion.section className="section about" {...sectionAnimation}>
+      {/* About Section */}
+      <motion.section
+        className="section about"
+        id="about"
+        initial={sectionAnimation.initial}
+        whileInView={sectionAnimation.whileInView}
+        transition={sectionAnimation.transition}
+        viewport={sectionAnimation.viewport}
+      >
         <h2>About Me</h2>
-        <p>
-          I am a software engineering student with a strong interest in web
-          development, mobile applications, and data systems. I’m looking for
-          internship opportunities to apply and grow my skills in real-world
-          projects.
-        </p>
+
+        <div className="about-content">
+          <div className="about-image">
+            <img src={profileImg} alt="Chenitha Nethvin profile" />
+          </div>
+
+          <div className="about-text">
+            <p>
+              I am a software engineering student with a strong interest in web
+              development, mobile applications, and data systems. I am looking for
+              internship opportunities to apply and grow my skills in real-world
+              projects.
+            </p>
+          </div>
+
+        </div>
+        <a
+          href="/W.G. Chenitha Nethvin Resume.pdf"
+          download
+          className="btn-download"
+        >
+          Download Resume
+        </a>
       </motion.section>
 
-      <motion.section className="section skills" {...sectionAnimation}>
+
+
+      {/* Skills Section */}
+      <motion.section
+        className="section skills"
+        id="skills"
+        initial={sectionAnimation.initial}
+        whileInView={sectionAnimation.whileInView}
+        transition={sectionAnimation.transition}
+        viewport={sectionAnimation.viewport}
+      >
         <h2>Skills</h2>
-        <ul>
-          <li>React.js, HTML5, CSS3, JavaScript</li>
-          <li>Java, Android, Bluetooth Programming</li>
-          <li>MySQL, PHP, Database Management</li>
-          <li>C++, Python, R</li>
-        </ul>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.5,
+            scale: { type: "spring", bounce: 0.5 },
+          }}
+          style={{
+            backgroundColor: "#007bff",
+            padding: "1rem",
+            borderRadius: "12px",
+            margin: "1rem 0",
+            color: "#fff",
+          }}
+        >
+          <ul>
+            <li>React.js, HTML5, CSS3, JavaScript</li>
+            <li>Java, Android</li>
+            <li>MySQL, PHP, Database Management</li>
+            <li>C++, Python, R</li>
+          </ul>
+        </motion.div>
       </motion.section>
 
-      <motion.section className="section projects" {...sectionAnimation}>
+      {/* Projects Section */}
+      <motion.section
+        className="section projects"
+        id="projects"
+        initial={sectionAnimation.initial}
+        whileInView={sectionAnimation.whileInView}
+        transition={sectionAnimation.transition}
+        viewport={sectionAnimation.viewport}
+      >
         <h2>Projects</h2>
 
-        <motion.div className="project-card" {...projectCardAnimation} tabIndex={0}>
-          <h3>Smart Home Controller (Android + Bluetooth)</h3>
+        <motion.div
+          className="project-card"
+          {...projectCardAnimation}
+          tabIndex={0}
+          role="button"
+          aria-label="Rajapakse Pharmacy Web Application"
+        >
+          <h3>RAJAPAKSE PHARMACY Web Application</h3>
           <p>
-            Built a mobile app to control lights and appliances using Java and
-            Bluetooth communication with Arduino.
+            A fast, stable and secure pharmacy management system built with
+            React.js, Node.js, and MongoDB.
           </p>
         </motion.div>
 
-        <motion.div className="project-card" {...projectCardAnimation} tabIndex={0}>
-          <h3>Knight Database System (C++)</h3>
+        <motion.div
+          className="project-card"
+          {...projectCardAnimation}
+          tabIndex={0}
+          role="button"
+          aria-label="Rainy Weather App"
+        >
+          <h3>RAINY</h3>
           <p>
-            Developed a menu-driven console app using structs, enums, and
-            vectors to manage fantasy character data.
+            A mobile application that provides weather updates and forecasts
+            using Java, Gradle, and AccuWeather API.
           </p>
         </motion.div>
 
-        <motion.div className="project-card" {...projectCardAnimation} tabIndex={0}>
-          <h3>CollectOld.com (PHP + MySQL)</h3>
+        <motion.div
+          className="project-card"
+          {...projectCardAnimation}
+          tabIndex={0}
+          role="button"
+          aria-label="Driive Fresh Marketplace"
+        >
+          <h3>DRIIVE FRESH</h3>
           <p>
-            Created a full-stack e-commerce platform for collecting vintage
-            items. Includes login, cart, and admin panel.
+            An online marketplace to sell accessories required for a pleasant
+            driving experience.
           </p>
         </motion.div>
       </motion.section>
 
-      <motion.section className="section contact" {...sectionAnimation}>
+      {/* Contact Section */}
+      <motion.section
+        className="section contact"
+        id="contact"
+        initial={sectionAnimation.initial}
+        whileInView={sectionAnimation.whileInView}
+        transition={sectionAnimation.transition}
+        viewport={sectionAnimation.viewport}
+      >
         <h2>Contact</h2>
         <p>
           Email:{" "}
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="mailto:chenithanethvin@gmail.com">
+            chenithanethvin@gmail.com
+          </a>
         </p>
         <p>
           LinkedIn:{" "}
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/chenitha-nethvin-248163273/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            linkedin.com/in/yourprofile
+            linkedin.com/in/chenitha-nethvin
           </a>
         </p>
         <p>
           GitHub:{" "}
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Cheni-SllitA"
             target="_blank"
             rel="noopener noreferrer"
           >
-            github.com/yourusername
+            github.com/Cheni-SllitA
           </a>
         </p>
       </motion.section>
 
-      <footer>
-        <p>© 2025 Chenitha Nethvin. All rights reserved.</p>
-      </footer>
+      {/* Resume Section */}
+      {/* <motion.section
+        className="section resume"
+        id="resume"
+        initial={sectionAnimation.initial}
+        whileInView={sectionAnimation.whileInView}
+        transition={sectionAnimation.transition}
+        viewport={sectionAnimation.viewport}
+      >
+        <h2>My Resume</h2>
+
+      </motion.section> */}
     </div>
   );
 }
