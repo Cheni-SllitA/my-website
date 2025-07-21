@@ -208,3 +208,7 @@ body {
   padding-top: 70px; /* offset for fixed navbar */
 }
 
+.animated-text span {
+  display: inline-block;
+  will-change: transform, opacity, color;
+}

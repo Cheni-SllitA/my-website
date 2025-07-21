@@ -1,4 +1,5 @@
 // src/App.js
+import ScrollTriggered from "./ScrollTriggered";
 import React from "react";
 import "./home.css";
 import { motion } from "framer-motion";
@@ -51,6 +52,7 @@ function Home() {
 
         </div>
         <a
+          id="resume"
           href="/W.G. Chenitha Nethvin Resume.pdf"
           download
           className="btn-download"
@@ -58,8 +60,6 @@ function Home() {
           Download Resume
         </a>
       </motion.section>
-
-
 
       {/* Skills Section */}
       <motion.section
@@ -186,21 +186,7 @@ function Home() {
           </a>
         </p>
       </motion.section>
-
-      {/* Resume Section */}
-      {/* <motion.section
-        className="section resume"
-        id="resume"
-        initial={sectionAnimation.initial}
-        whileInView={sectionAnimation.whileInView}
-        transition={sectionAnimation.transition}
-        viewport={sectionAnimation.viewport}
-      >
-        <h2>My Resume</h2>
-
-      </motion.section> */}
     </div>
   );
 }
-
 export default Home;
