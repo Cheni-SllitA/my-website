@@ -2,10 +2,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import './Navbar.css'; // Add this file for your dark custom styles
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <nav className="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm">
       <div className="container-fluid">
         <a className="navbar-brand fw-bold" href="#">W.G. Chenitha Nethvin</a>
 
@@ -24,7 +25,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" href="#">Home</a>
+              <a className="nav-link" href="#">Home</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#skills">Skills</a>
@@ -46,4 +47,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
