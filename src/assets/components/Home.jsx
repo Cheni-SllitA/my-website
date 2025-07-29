@@ -22,7 +22,7 @@ function Home() {
     <div className="App">
       <header className="header">
         <h1>Chenitha Nethvin</h1>
-        <p>Software Engineering Student | Passionate Developer</p>
+        <p className="header-text">Software Engineering Student | Passionate Developer</p>
       </header>
 
       {/* About Section */}
@@ -34,7 +34,7 @@ function Home() {
         transition={sectionAnimation.transition}
         viewport={sectionAnimation.viewport}
       >
-        <h2>About Me</h2>
+        <h2 className="about-heading">About Me</h2>
 
         <div className="about-content">
           <div className="about-image">
@@ -55,7 +55,7 @@ function Home() {
           id="resume"
           href="/W.G. Chenitha Nethvin Resume.pdf"
           download
-          className="btn-download"
+          className="button-link"
         >
           Download Resume
         </a>
@@ -79,19 +79,46 @@ function Home() {
             scale: { type: "spring", bounce: 0.5 },
           }}
           style={{
-            backgroundColor: "#007bff",
+            // backgroundColor: "#007bff",
             padding: "1rem",
             borderRadius: "12px",
             margin: "1rem 0",
             color: "#fff",
           }}
         >
-          <ul>
-            <li>React.js, HTML5, CSS3, JavaScript</li>
-            <li>Java, Android</li>
-            <li>MySQL, PHP, Database Management</li>
-            <li>C++, Python, R</li>
-          </ul>
+          <section className="section skills">
+            <div className="skills-grid">
+              <div className="skill-category">
+                <h4>Programming Languages</h4>
+                <div className="skill-badges">
+                  <img src="../images/java.png" alt="" />
+                  <span>Java</span>
+                  <img src="../images/c++.png" alt="" />
+                  <span>C++</span>
+                  <img src="../images/c++.png" alt="" />
+                  <span>Python</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h4>Web Development</h4>
+                <div className="skill-badges">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>React</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h4>Tools & Others</h4>
+                <div className="skill-badges">
+                  <span>Git</span>
+                  <span>MySQL</span>
+                  <span>VS Code</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </motion.div>
       </motion.section>
 
@@ -161,7 +188,7 @@ function Home() {
         <h2>Contact</h2>
         <p>
           Email:{" "}
-          <a href="mailto:chenithanethvin@gmail.com">
+          <a href="mailto:chenithanethvin@gmail.com" className="button-link">
             chenithanethvin@gmail.com
           </a>
         </p>
@@ -171,7 +198,7 @@ function Home() {
             href="https://www.linkedin.com/in/chenitha-nethvin-248163273/"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            className="button-link">
             linkedin.com/in/chenitha-nethvin
           </a>
         </p>
@@ -181,7 +208,7 @@ function Home() {
             href="https://github.com/Cheni-SllitA"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            className="button-link">
             github.com/Cheni-SllitA
           </a>
         </p>
