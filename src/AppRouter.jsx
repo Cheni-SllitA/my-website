@@ -9,7 +9,7 @@ import Footer from "./assets/components/Footer";
 
 function AppRouter() {
   return (
-    <Router>
+    <Router basename="/my-website">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

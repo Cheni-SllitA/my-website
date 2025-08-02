@@ -91,11 +91,11 @@ function Home() {
               <div className="skill-category">
                 <h4>Programming Languages</h4>
                 <div className="skill-badges">
-                  <img src="../images/java.png" alt="" />
+                  {/* <img src="../images/java.png" alt="" /> */}
                   <span>Java</span>
-                  <img src="../images/c++.png" alt="" />
+                  {/* <img src="../images/c++.png" alt="" /> */}
                   <span>C++</span>
-                  <img src="../images/c++.png" alt="" />
+                  {/* <img src="../images/c++.png" alt="" /> */}
                   <span>Python</span>
                 </div>
               </div>
