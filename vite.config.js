@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: "/my-website/",
   plugins: [react()],
-  base: '/my-website/', // This is already correct
-})
+});
+
