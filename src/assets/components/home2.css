@@ -1,0 +1,224 @@
+/* Dark Theme: Indigo + Teal */
+:root {
+  --bg-color: #0A192F;
+  --card-bg: #112240;
+  --text-color: #CCD6F6;
+  --text-muted: #8892B0;
+  --accent-color: #64FFDA;
+  --accent-hover: #4DEAC9;
+  --border-color: #233554;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  padding-top: 70px;
+}
+
+.App {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 40px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: var(--accent-color);
+}
+
+.header p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Section Headings */
+.section {
+  margin-bottom: 40px;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.section h2 {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* About */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.about-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.skill-category {
+  flex: 1 1 250px;
+}
+
+.skill-category h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-badges span {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  padding: 0.3em 0.8em;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.skill-badges span:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Projects */
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Links & Buttons */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+a.button-link {
+  display: inline-block;
+  padding: 0.4em 1em;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.button-link:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Contact */
+.contact a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
