@@ -1,4 +1,4 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
@@ -11,6 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,10 +25,10 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: npm run build  # CRA builds into the "build" folder
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build  # ✅ <-- changed from ./dist to ./build
