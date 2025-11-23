@@ -70,7 +70,7 @@ export default function App() {
       <nav className="fixed w-full z-50 bg-white/60 dark:bg-black/30 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold tracking-wide text-cyan-500">
-            Chenitha.dev
+            Chenitha Nethvin
           </h1>
           <div className="hidden md:flex items-center space-x-6 text-sm uppercase font-medium">
             {sections.map((item) => (
