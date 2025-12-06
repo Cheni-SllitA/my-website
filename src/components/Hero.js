@@ -39,13 +39,13 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <a href="https://github.com/" target="_blank">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
           <Github className="w-6 h-6 hover:text-cyan-400 transition" />
         </a>
-        <a href="https://linkedin.com/" target="_blank">
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
           <Linkedin className="w-6 h-6 hover:text-cyan-400 transition" />
         </a>
-        <a href="mailto:you@example.com" target="_blank">
+        <a href="mailto:you@example.com" target="_blank" rel="noopener noreferrer">
           <Mail className="w-6 h-6 hover:text-cyan-400 transition" />
         </a>
       </motion.div>

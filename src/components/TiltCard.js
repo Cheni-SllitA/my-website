@@ -37,6 +37,7 @@ export default function TiltCard({ project }) {
         href={project.link}
         target="_blank"
         className="text-cyan-500 hover:underline"
+        rel="noopener noreferrer"
       >
         View →
       </a>

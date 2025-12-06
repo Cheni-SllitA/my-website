@@ -6,9 +6,9 @@ export default function RevealSection({ id, title, icon, children }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
-  useEffect(() => {
-    if (inView) controls.start("visible");
-  }, [inView]);
+useEffect(() => {
+  if (inView) controls.start("visible");
+}, [inView, controls]);
 
   const variants = {
     hidden: { opacity: 0, y: 50 },
