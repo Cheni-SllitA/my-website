@@ -8,13 +8,14 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import RevealSection from "./components/RevealSection";
+import Experience from "./components/Experience";
 
 import { User } from "lucide-react";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
-  const sections = ["home", "about", "skills", "projects", "contact"];
+  const sections = ["home", "about", "Experience","skills", "projects",  "contact"];
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
@@ -42,6 +43,7 @@ export default function App() {
         projects.
       </RevealSection>
 
+      <Experience/>
       <Skills />
       <Projects />
       <Contact />
