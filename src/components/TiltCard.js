@@ -21,11 +21,14 @@ export default function TiltCard({ project }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setRotate({ x: 0, y: 0 })}
     >
-      <img
-        src={project.image}
-        className="w-full h-48 object-cover rounded-lg mb-4"
-        alt={project.title}
-      />
+      {/* Render image only if it exists */}
+      {project.image && (
+        <img
+          src={project.image}
+          className="w-full h-48 object-cover rounded-lg mb-4"
+          alt={project.title}
+        />
+      )}
 
       <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
 
@@ -33,14 +36,17 @@ export default function TiltCard({ project }) {
         {project.description}
       </p>
 
-      <a
-        href={project.link}
-        target="_blank"
-        className="text-cyan-500 hover:underline"
-        rel="noopener noreferrer"
-      >
-        View →
-      </a>
+      {/* Render link only if it exists */}
+      {project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          className="text-cyan-500 hover:underline"
+          rel="noopener noreferrer"
+        >
+          View →
+        </a>
+      )}
     </motion.div>
   );
 }
